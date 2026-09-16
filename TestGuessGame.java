@@ -15,6 +15,7 @@ class GuessGame{
 
     public void playRound(int low, int high) {
         Scanner sc = new Scanner(System.in);
+        attempts = 0;
         generateNumber(low, high);
         boolean correct = false;
         while (!correct && attempts < maxAttempts) {
@@ -27,7 +28,8 @@ class GuessGame{
             System.out.println("player won!");
             score++;
         }else {
-            System.out.println("player ran out of attempts!");
+            System.out.println("player ran out of attempts!" +);
+            System.out.println("The Number is: " + hiddenNumber);
         }
     }
 
